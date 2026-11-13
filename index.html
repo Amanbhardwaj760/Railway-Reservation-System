@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Railway Reservation System - C++ OOP project portfolio by Aman.">
+  <title>Railway Reservation System | Project Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">Railway<span>Reserve</span></a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#technology">Technology</a>
+        <a href="blog.html">Project Blog ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">C++ • OBJECT-ORIENTED PROGRAMMING • FILE HANDLING</p>
+          <h1>Railway Reservation <span>System</span></h1>
+          <p class="hero-copy">A console-based C++ application that simplifies essential railway reservation tasks—from viewing trains and booking tickets to cancellation and PNR enquiry.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#features">Explore Project</a>
+            <a class="btn btn-outline" href="blog.html">Read Project Blog</a>
+          </div>
+          <p class="author">Project by <strong>Aman</strong> · BCA Data Science · Semester 3</p>
+        </div>
+        <div class="train-card" aria-label="Railway project summary">
+          <div class="train-top"><span>RAILWAY RESERVATION</span><span class="live-dot">● SYSTEM</span></div>
+          <div class="route">
+            <div><small>FROM</small><strong>DEL</strong><span>Delhi</span></div>
+            <div class="route-line"><span>🚆</span></div>
+            <div><small>TO</small><strong>BPL</strong><span>Bhopal</span></div>
+          </div>
+          <div class="ticket-info">
+            <div><small>PNR</small><strong>Automatically generated</strong></div>
+            <div><small>STORAGE</small><strong>Text files</strong></div>
+          </div>
+          <div class="ticket-footer">BOOK · CANCEL · CHECK STATUS</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="overview">
+      <div class="section-heading">
+        <p class="eyebrow">PROJECT OVERVIEW</p>
+        <h2>Making reservation tasks simpler</h2>
+      </div>
+      <p class="lead">The Railway Reservation System is a menu-driven application developed in C++. It provides passenger services such as viewing available trains, booking tickets, cancelling tickets and checking ticket status through a unique PNR. Administrator options allow new trains to be added and all bookings to be viewed.</p>
+      <div class="stats">
+        <div class="stat"><strong>3</strong><span>Core classes</span></div>
+        <div class="stat"><strong>7</strong><span>Menu options</span></div>
+        <div class="stat"><strong>2</strong><span>Text data files</span></div>
+        <div class="stat"><strong>PNR</strong><span>Ticket reference</span></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT IT CAN DO</p>
+          <h2>Core features</h2>
+          <p>Key functions implemented in the current project version.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">🚆</div><h3>View trains</h3><p>Display train number, name, route, available seats and fare.</p></article>
+          <article class="feature"><div class="feature-icon">🎟️</div><h3>Book tickets</h3><p>Enter passenger details, validate seats, calculate fare and generate a PNR.</p></article>
+          <article class="feature"><div class="feature-icon">↩</div><h3>Cancel tickets</h3><p>Cancel an active booking, restore seats and calculate the refund.</p></article>
+          <article class="feature"><div class="feature-icon">🔎</div><h3>PNR enquiry</h3><p>Find ticket details and check whether a ticket is confirmed or cancelled.</p></article>
+          <article class="feature"><div class="feature-icon">🛠</div><h3>Train management</h3><p>Administrator can add trains while duplicate train numbers are rejected.</p></article>
+          <article class="feature"><div class="feature-icon">💾</div><h3>File storage</h3><p>Train and ticket records are saved in trains.txt and tickets.txt.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="technology">
+      <div class="section-heading">
+        <p class="eyebrow">BUILT WITH</p>
+        <h2>Technology & concepts</h2>
+      </div>
+      <div class="tech-layout">
+        <div class="tech-panel">
+          <h3>Tools and technologies</h3>
+          <div class="tags"><span>C++11</span><span>GCC / g++</span><span>STL vector</span><span>fstream</span><span>sstream</span><span>Console UI</span><span>Text files</span></div>
+        </div>
+        <div class="tech-panel">
+          <h3>Programming concepts</h3>
+          <ul class="check-list">
+            <li>Classes and objects: Train, Ticket and ReservationSystem</li>
+            <li>Constructors and member functions</li>
+            <li>Vectors for in-memory records</li>
+            <li>File handling for persistent storage</li>
+            <li>Pointers, loops, switch-case and input validation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rules">
+        <h3>Important booking rules</h3>
+        <div class="rule-grid">
+          <p><strong>PNR:</strong> starts at 1001 and increments for new tickets.</p>
+          <p><strong>Senior citizen concession:</strong> passengers aged 60 or above pay 60% of the calculated fare.</p>
+          <p><strong>Cancellation:</strong> 80% of the ticket amount is refunded; 20% is the cancellation charge.</p>
+          <p><strong>Seat validation:</strong> booking is accepted only when requested seats are available.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container closing">
+        <p class="eyebrow">LEARNINGS & NEXT STEPS</p>
+        <h2>A practical application of C++ concepts</h2>
+        <p>This project demonstrates how classes, vectors, file streams and validation can work together to model a real-world reservation workflow.</p>
+        <a class="btn btn-light" href="blog.html">Read the development blog →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><span>Railway Reservation System · C++ Project</span><a href="blog.html">Project Blog</a></div>
+  </footer>
+</body>
+</html>

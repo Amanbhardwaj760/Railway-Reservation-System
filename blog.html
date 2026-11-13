@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Development blog for the Railway Reservation System C++ project.">
+  <title>Project Blog | Railway Reservation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">Railway<span>Reserve</span></a>
+      <div class="nav-links"><a href="index.html">Portfolio</a><a href="#development">Development</a><a href="#learnings">Learnings</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container blog-hero-inner">
+        <p class="eyebrow">PROJECT JOURNAL · C++ OOP</p>
+        <h1>Building a Railway <span>Reservation System</span></h1>
+        <p>A look at the problem, design decisions, implementation and lessons from developing a menu-driven railway reservation application in C++.</p>
+        <a class="text-link" href="index.html">← Back to project portfolio</a>
+      </div>
+    </section>
+
+    <article class="article container">
+      <div class="article-meta"><span>By Aman</span><span>·</span><span>BCA Data Science</span><span>·</span><span>Object-Oriented Programming</span></div>
+
+      <section>
+        <h2>1. Why this project?</h2>
+        <p>Railway reservation involves several connected tasks: checking trains, confirming seat availability, recording passenger details, issuing a ticket and processing cancellations. When these activities are handled manually, they can take time and may lead to record-keeping or calculation errors.</p>
+        <p>I developed this project to create a simplified computer-based version of these basic reservation-counter activities and to apply C++ programming concepts to a practical problem.</p>
+      </section>
+
+      <section id="development">
+        <h2>2. What does the system do?</h2>
+        <p>The application provides a numbered console menu. Passengers can view available trains, book a ticket, cancel a ticket and check its status using a PNR number. Administrator options allow a new train to be added and all booking records to be viewed.</p>
+        <div class="article-callout"><strong>Seven menu choices:</strong> View Trains · Book Ticket · Cancel Ticket · Check PNR Status · Add Train · View All Bookings · Exit.</div>
+      </section>
+
+      <section>
+        <h2>3. Designing the program</h2>
+        <p>The design is organised around three classes. <strong>Train</strong> stores train number, name, source, destination, seat count and fare. <strong>Ticket</strong> stores PNR, passenger details, train number, number of seats, amount and booking status. <strong>ReservationSystem</strong> manages the train and ticket collections and performs the main operations.</p>
+        <p>STL vectors hold train and ticket records while the program is running. The functions in the reservation controller load, save, search, book and cancel records.</p>
+      </section>
+
+      <section>
+        <h2>4. Saving data with file handling</h2>
+        <p>The project uses two plain-text files: <code>trains.txt</code> and <code>tickets.txt</code>. Records are written as lines with fields separated by a pipe character (<code>|</code>). When the application starts, it loads existing records into vectors. After a booking, cancellation or train addition, the updated records are saved again.</p>
+      </section>
+
+      <section>
+        <h2>5. Booking, fare and cancellation rules</h2>
+        <p>During booking, the system checks whether the selected train exists and whether the requested number of seats is available. It calculates the fare and generates the next PNR, beginning with 1001. For passengers aged 60 or above, the project applies a 40% concession.</p>
+        <p>When a confirmed ticket is cancelled, the booked seats are returned to the train's available-seat count. The refund is calculated as 80% of the ticket amount, with a 20% cancellation charge. A ticket that is already cancelled cannot be cancelled again.</p>
+      </section>
+
+      <section>
+        <h2>6. Testing the application</h2>
+        <p>The project report records tests for normal booking, senior-citizen concession, invalid train numbers, requests for too many or zero seats, cancellation, repeated cancellation, incorrect PNRs, duplicate train numbers, non-numeric input and data persistence after restarting the program.</p>
+        <p>The report states that the listed test cases passed after correcting an input-handling issue involving non-numeric menu input.</p>
+      </section>
+
+      <section id="learnings">
+        <h2>7. What I learned</h2>
+        <ul>
+          <li>How to divide a problem into classes and member functions.</li>
+          <li>How vectors can store collections of objects dynamically.</li>
+          <li>How file streams can preserve records between program runs.</li>
+          <li>How to validate user input and handle invalid operations.</li>
+          <li>How to translate business rules into program logic.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>8. Current limitations and future improvements</h2>
+        <p>The current version is console-based, has no user login, does not allocate specific berth numbers or travel dates, and uses text files rather than a database. The project report identifies possible future improvements such as login, journey dates, berth allocation, waiting list/RAC, database storage, a graphical or web interface, and online payment or ticket notifications.</p>
+      </section>
+
+      <section>
+        <h2>9. Conclusion</h2>
+        <p>Developing the Railway Reservation System helped me connect C++ concepts with a familiar real-world process. The application covers the basic workflow of viewing trains, booking and cancelling tickets, checking PNR status and managing train records. It also provided practical experience in designing, implementing and testing a small software system.</p>
+        <a class="btn btn-primary" href="index.html">Return to Portfolio</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>Railway Reservation System · C++ Project</span><a href="index.html">Portfolio</a></div></footer>
+</body>
+</html>
